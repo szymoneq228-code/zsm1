@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Strona o moich zainteresowaniach: JavaScript, składanie PC i gry komputerowe."/>
+  <title>Moje Zainteresowania</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e0e0e0;
+      --muted: #888;
+      --accent-js: #f7df1e;
+      --accent-pc: #00bfff;
+      --accent-games: #ff4655;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Courier New', monospace;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 0 18px rgba(255,255,255,0.15);
+    }
+
+    header p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--border);
+      border: none;
+      margin: 20px auto 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+    }
+
+    .card-tag {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .card:nth-child(1) .card-tag { color: var(--accent-js); }
+    .card:nth-child(2) .card-tag { color: var(--accent-pc); }
+    .card:nth-child(3) .card-tag { color: var(--accent-games); }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .card:nth-child(1) h2 {
+      text-shadow: 0 0 14px rgba(247, 223, 30, 0.4);
+    }
+    .card:nth-child(2) h2 {
+      text-shadow: 0 0 14px rgba(0, 191, 255, 0.4);
+    }
+    .card:nth-child(3) h2 {
+      text-shadow: 0 0 14px rgba(255, 70, 85, 0.4);
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .card ul li {
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card ul li::before {
+      content: '> ';
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Moje Zainteresowania</h1>
+    <p>Co lubię robić w wolnym czasie</p>
+    <hr class="divider" aria-hidden="true" />
+  </header>
+
+  <main>
+    <div class="grid">
+
+      <article class="card">
+        <span class="card-tag">01 / Programowanie</span>
+        <h2>JavaScript</h2>
+        <p>Lubię tworzyć rzeczy w JS — od prostych skryptów po bardziej złożone aplikacje webowe.</p>
+        <ul>
+          <li>Vanilla JS / ES6+</li>
+          <li>DOM manipulation</li>
+          <li>Node.js &amp; npm</li>
+          <li>Fetch API &amp; async/await</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="card-tag">02 / Hardware</span>
+        <h2>Składanie PC</h2>
+        <p>Interesuję się budowaniem komputerów — od doboru podzespołów po optymalizację wydajności.</p>
+        <ul>
+          <li>Dobór CPU &amp; GPU</li>
+          <li>Chłodzenie i airflow</li>
+          <li>Overclocking</li>
+          <li>Zarządzanie kablami</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="card-tag">03 / Gaming</span>
+        <h2>Gry Komputerowe</h2>
+        <p>Gry to nie tylko rozrywka — to też fabuła, mechaniki i społeczność wokół nich.</p>
+        <ul>
+          <li>FPS / Tactical shooters</li>
+          <li>RPG &amp; open world</li>
+          <li>Indie games</li>
+          <li>Śledzenie nowości</li>
+        </ul>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>// zbudowane w HTML + CSS</p>
+  </footer>
+
+</body>
+</html>
